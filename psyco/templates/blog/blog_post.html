@@ -1,0 +1,137 @@
+{% extends "__layout__.html" %}
+{% block content %}
+
+		<!-- Content -->
+		<main class="content-row">
+			<div class="page-title-wrapp">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<h2 class="page-title-01">{{ posts.title }}</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<ul class="breadcrumbs">
+								<li class="active">
+									<a href="#">Home</a>
+								</li>
+								<li>Blog Post</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-box-01 pad-bt-57 pad-top-38">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="blog-listing single-post fullwidth">
+								<article class="blog-post">
+									<figure class="blog-post__img">
+										<img src="{{ posts.img_off }}" alt="">
+									</figure>
+									<h3 class="blog-post__title">
+										{{ posts.title }}
+									</h3>
+									<ul class="blog-post__meta-info">
+										<li>{{ posts.posted_on }}</li>
+										<li>
+											<a href="#">{{ posts.categorie }}</a>
+										</li>
+									
+									</ul>
+									<div class="blog-post__content">
+										<p>{{ posts.body | safe }}</p>
+								<ul class="single-post__soc-list">
+									<li>
+										<a href="#">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-instagram" aria-hidden="true"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-google-plus" aria-hidden="true"></i>
+										</a>
+									</li>
+								</ul>
+								<div class="user-info">
+									<div class="user-info-tbl">
+										<div class="user-info-tbl__row">
+											<div class="user-info-tbl__col">
+												<figure class="user-info__img">
+													<img src="{{ url_for('static', filename='img/usr.png') }}" alt="">
+												</figure>
+											</div>
+											<div class="user-info-tbl__col">
+												<div class="user-info__content">
+													<h4 class="user-info__title">Katrine Simons</h4>
+													<div class="user-info__text">
+														<p>The good news is that both medical and psychological treatments for depression have a strong evidence base, and new treatments are being developed all the time. In fact, one of the best predictors of treatment success is how closely you
+															follow your treatment plan. </p>
+													</div>
+													<ul class="user-info__soc-list">
+														<li>
+															<a href="#">
+																<i class="fa fa-facebook" aria-hidden="true"></i>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-twitter" aria-hidden="true"></i>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-instagram" aria-hidden="true"></i>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																<i class="fa fa-google-plus" aria-hidden="true"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+								
+								<div class="reply-box">
+									<h4 class="reply-title">2
+										<span>Comments</span>
+									</h4>
+									<ul class="reply-box__list">
+										
+											</div>
+											
+															
+														</div>
+													</div>
+												</li>
+											</ul>
+										</li>
+									</ul>
+					
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+{% endblock content %}

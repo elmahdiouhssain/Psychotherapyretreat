@@ -1,0 +1,115 @@
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% from "_formhelpers.html" import render_field %}
+{% extends "__layout__.html" %}
+{% block content %}
+		<!-- Content -->
+		<main class="content-row">
+			<div class="page-title-wrapp">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<h2 class="page-title-01">Contacts</h2>
+						</div>
+					</div>
+
+			<div class="content-box-01 pad-bt-90">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-lg-6">
+							<div class="contacts-map-wrapp">
+								<div class="contacts_map">
+									<div id="map-canvas"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-6">
+							<div class="contacts-block-wrapp">
+								<h6 class="subtitle-04">Get in touch</h6>
+								<h3 class="title-02">Find Us on a
+									<span>Map</span>
+								</h3>
+								<div class="contacts-block-01">
+									<p>We have worls-class, flexible support via live chat, email and phone. We guarantee that you’ll be able to have any issue resolved within 24 hours. You van contact support immediately here.</p>
+								</div>
+								<p class="contact-location">11 Walsingham Place, Truro,Cornwall TR1 2RP United Kingdom</p>
+
+								<p class="contact-phone">Call:
+									<span>+447810446496</span>
+										<center>
+    
+                        		  {% if error %}
+            			            <p class=error><strong>Error:</strong> {{ error }}
+            			        {% endif %}
+            			            <br>
+            			        {% with messages = get_flashed_messages(with_categories=true) %}
+            			        {% if messages %}
+            			        <div class="alert alert-{{ messages.0.0 }}" role="alert">
+            			            {% for category, message in messages %}
+            			        {{ message }} </br>
+            			        {% endfor %}
+            			         </div>
+            			         {% endif %}
+            			        {% endwith %}
+            			        </center>
+                            <hr>
+								</p>
+								<div class="reply-form">
+                           				 
+									<div role="form" class="form-in-wrapp" lang="en-US" dir="ltr" method="post">
+										<div class="screen-reader-response"></div>
+										<div id="note"></div>
+										<div id="fields">
+											{{ form.csrf_token }} 
+
+											<form action="" method="post" class="reply-form__form">
+
+												<div class="reply-form__box-01 name">
+													{{ form.name.label(class="form-control-label") }}
+
+                         						   {{ form.name(class="form-control row=20 placeholder=Enter Name") }}<br>
+
+						                            {% for error in form.name.errors %}
+						                            <span style="color: red;">[{{ error }}]</span>
+						                            {% endfor %}
+													</div>
+
+												</div>
+
+												<div class="reply-form__box-02 your-email">
+												{{ form.mail.label(class="form-control-label") }}
+
+                         						   {{ form.mail(class="form-control row=20 placeholder=Enter Mail") }}<br>
+
+						                            {% for error in form.mail.errors %}
+						                            <span style="color: red;">[{{ error }}]</span>
+						                            {% endfor %}
+													</div>
+												</div>
+
+												<div class="reply-form__box-03 your-message">
+												{{ form.msg.label(class="form-control-label") }}
+
+                         						   {{ form.msg(class="form-control row=20 placeholder=Enter Sub") }}<br>
+
+						                            {% for error in form.msg.errors %}
+						                            <span style="color: red;">[{{ error }}]</span>
+						                            {% endfor %}
+													</div>
+
+											
+
+												<div class="reply-form__box-04">
+													<button class="btn-01" type="submit">Send message</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+{% endblock content %}

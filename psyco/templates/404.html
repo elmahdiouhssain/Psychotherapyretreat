@@ -1,0 +1,26 @@
+{% extends "__layout__.html" %}
+{% block content %}
+
+
+		<!-- Content -->
+		<main class="content-row page-404">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<div class="page-404-wrapp">
+							<h2 class="page-404-title">404</h2>
+							<p class="page-404-subtitle">Oops! Page Not Found!</p>
+							<p class="page-404-text">Either Something Get Wrong or the Page Doesn't Exist Anymore.</p>
+							<form action="./" class="page-404-form">
+								<div>
+									<input class="page-404-form__text" type="text" name="page-404-text" placeholder="Search">
+									<button class="page-404-form__btn" type="button">Search</button>
+								</div>
+							</form>
+							<a href="{{ url_for('main.index') }}" class="page-404-btn">Take me home</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+{% endblock content %}

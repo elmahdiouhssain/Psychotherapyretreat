@@ -1,0 +1,413 @@
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% from "_formhelpers.html" import render_field %}
+{% extends "__layout__.html" %}
+{% block content %}
+		<!-- Content -->
+		<main class="content-row">
+			<div class="img-box-01">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 text-center">
+							<p class="subtitle-07">there are one million ways to reach it</p>
+							<h2 class="title-06">
+								<span>Effective Treatments</span> for
+								<br> Overcoming Difficulties</h2>
+							<a class="btn-02" href="{{ url_for('main.about') }}">About Us</a>
+							<a class="btn-03" href="{{ url_for('main.aboutme') }}">About Me</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-box-02 pad-top-70 pad-bt-70">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="icon-boxes-04-wrapp">
+								<div class="icon-boxes-04-row">
+									<div class="icon-boxes-04">
+										<p class="icon-boxes-04__icon">01</p>
+										<h4 class="icon-boxes-04__title">Professional Accreditation</h4>
+										<div class="icon-boxes-04__text">
+											<p>I have worked as a psychologist since 2008 and am registered as a clinical psychologist</p>
+										</div>
+									</div>
+									<div class="icon-boxes-04">
+										<p class="icon-boxes-04__icon">02</p>
+										<h4 class="icon-boxes-04__title">Training &amp; Education</h4>
+										<div class="icon-boxes-04__text">
+											<p>I have training and experience in the main evidence-based psychotherapeutic modalities</p>
+										</div>
+									</div>
+									<div class="icon-boxes-04">
+										<p class="icon-boxes-04__icon">03</p>
+										<h4 class="icon-boxes-04__title">Best Treatment</h4>
+										<div class="icon-boxes-04__text">
+											<p>I use different therapeutic methods to help people overcome their problems</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-box-01 pad-top-75 pad-bt-85">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="about-me-cont">
+								<p class="subtitle-01">About me</p>
+								<h3 class="title-03">Hello! I am
+									<span>Dr. Alex Wedlock</span>
+								</h3>
+								<div class="about-me-text-01">
+									<p>Today you are one step closer to a new you where you feel empowered and on a positive path to growth and well-being. As a cognitive-behavioral, solution-focused therapist, my goal is to help you uncover your true potential and lead a life that
+										is worth celebrating. While we can't change difficult situations of the past, we can work together to better understand and resolve challenges in your life.</p>
+								</div>
+								<p class="about-me-meta">Just Call Me Now 
+					
+								</p>
+								<p class="about-me-phone">
+						
+									<span class="about-me-p-02">+447810446496</span>
+								</p>
+								<div class="about-me-author">
+									<div class="about-me-author__img">
+										<img src="{{ url_for('static', filename='img/about_me/about_me_img_02.png') }}" alt="">
+									</div>
+									<div class="about-me-author__text">
+										<p>
+											<strong>Dr. Alex Wedlock</strong>,
+											<span>Professional Psychologist</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 text-md-center">
+							<figure class="about-us-img-01 mar-top-20">
+								<img src="{{ url_for('static', filename='img/home_page/img_box_02.jpg') }}" alt="">
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="banners-wrapp pad-bt-10">
+				<div class="banners-wrapp-cont">
+					<div class="banners-box-01">
+						<figure class="banners-box-01__img">
+							<img src="{{ url_for('static', filename='img/home_page/banners_box/banner_img_01.jpg') }}" alt="">
+						</figure>
+						<div class="banners-box-01__content">
+							<div class="banners-box-01-table">
+								<div class="banners-box-01-table__row">
+									<div class="banners-box-01-table__cell">
+										<h3 class="banners-box-01-title">For Adults</h3>
+										<div class="banners-box-01-text">
+											<p>I am expert in talking therapy and offer you a confidential and quick access service with appointments within 48 hours</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="banners-box-01">
+						<figure class="banners-box-01__img">
+							<img src="{{ url_for('static', filename='img/home_page/banners_box/banner_img_02.jpg') }}" alt="">
+						</figure>
+						<div class="banners-box-01__content">
+							<div class="banners-box-01-table">
+								<div class="banners-box-01-table__row">
+									<div class="banners-box-01-table__cell">
+										<h3 class="banners-box-01-title">For Groups</h3>
+										<div class="banners-box-01-text">
+											<p>I can offer effective treatment for stress, anxiety, depression, low self-esteem and many other conditions</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="banners-box-01">
+						<figure class="banners-box-01__img">
+							<img src="{{ url_for('static', filename='img/home_page/banners_box/banner_img_03.jpg') }}" alt="">
+						</figure>
+						<div class="banners-box-01__content">
+							<div class="banners-box-01-table">
+								<div class="banners-box-01-table__row">
+									<div class="banners-box-01-table__cell">
+										<h3 class="banners-box-01-title">For Children</h3>
+										<div class="banners-box-01-text">
+											<p>You can call me if your child, teenager or family is going through difficulties. I always ready to help you</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="content-box-02 overflow-01 pad-top-90 pad-bt-0">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="icon-boxes-in-wrapp">
+								<div class="icon-boxes-in-wrapp-row">
+									<div class="icon-boxes-in">
+										<div class="icon-boxes-02 icon--02">
+											<figure class="icon-boxes-02__icon">
+												<img src="{{ url_for('static', filename='img/icons/box_icon_01.png') }}" alt="">
+											</figure>
+											<h5 class="icon-boxes-02__title">Confidentiality</h5>
+											<p class="icon-boxes-02__text">All our meetings are confidential and information is protected. Do not worry about your defense.</p>
+										</div>
+										<div class="icon-boxes-02 icon--02">
+											<figure class="icon-boxes-02__icon">
+												<img src="{{ url_for('static', filename='img/icons/box_icon_04.png') }}" alt="">
+											</figure>
+											<h5 class="icon-boxes-02__title">Professionalism</h5>
+											<p class="icon-boxes-02__text">I guarantee only 100 % professional high quality services for you. I offer the best services.</p>
+										</div>
+										<div class="icon-boxes-02 icon--02">
+											<figure class="icon-boxes-02__icon">
+												<img src="{{ url_for('static', filename='img/icons/box_icon_02.png') }}" alt="">
+											</figure>
+											<h5 class="icon-boxes-02__title">Support 24/7</h5>
+											<p class="icon-boxes-02__text">You can call me any time of the day. I am always ready to support you in any difficult situation.</p>
+										</div>
+									</div>
+									<div class="icon-boxes-in">
+										<div class="img-wrapp-01">
+											<img src="{{ url_for('static', filename='img/home_page/img_box_03.png') }}" alt="">
+										</div>
+									</div>
+									<div class="icon-boxes-in">
+										<div class="icon-boxes-02 icon-boxes-02--right icon--02">
+											<figure class="icon-boxes-02__icon">
+												<img src="{{ url_for('static', filename='img/icons/box_icon_05.png') }}" alt="">
+											</figure>
+											<h5 class="icon-boxes-02__title">Work experience</h5>
+											<p class="icon-boxes-02__text">I have 10 years experience in private practice, working with people who have problems.</p>
+										</div>
+										<div class="icon-boxes-02 icon-boxes-02--right icon--02">
+											<figure class="icon-boxes-02__icon">
+												<img src="{{ url_for('static', filename='img/icons/box_icon_03.png') }}" alt="">
+											</figure>
+											<h5 class="icon-boxes-02__title">Development</h5>
+											<p class="icon-boxes-02__text">I try to develop and reach new heights. I attend various trainings and seminars that help me.</p>
+										</div>
+										<div class="icon-boxes-02 icon-boxes-02--right icon--02">
+											<figure class="icon-boxes-02__icon">
+												<img src="{{ url_for('static', filename='img/icons/box_icon_06.png') }}" alt="">
+											</figure>
+											<h5 class="icon-boxes-02__title">Reliability</h5>
+											<p class="icon-boxes-02__text">I will never leave you in a difficult moment. Call me right now and make an appoinment.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax parallax-01">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-3 col-md-3 col-lg-3">
+							<div class="progress-circle-item-02">
+								<div data-value="0.8" class="progress-circle-02">
+									<div class="progress-circle-02__value"></div>
+								</div>
+								<p class="progress-circle-02__text">Psychology</p>
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-3">
+							<div class="progress-circle-item-02">
+								<div data-value="0.75" class="progress-circle-02">
+									<div class="progress-circle-02__value"></div>
+								</div>
+								<p class="progress-circle-02__text">Neurology</p>
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-3">
+							<div class="progress-circle-item-02">
+								<div data-value="0.68" class="progress-circle-02">
+									<div class="progress-circle-02__value"></div>
+								</div>
+								<p class="progress-circle-02__text">Psychiatrists</p>
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-3">
+							<div class="progress-circle-item-02">
+								<div data-value="0.81" class="progress-circle-02">
+									<div class="progress-circle-02__value"></div>
+								</div>
+								<p class="progress-circle-02__text">Psychotherapy</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="content-box-02 pad-top-87">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-lg-6">
+							<div class="why-choose-me-box">
+								<p class="subtitle-01">What i treat</p>
+								<h3 class="title-02 mar-bt-21">Why Choose
+									<span>Me</span>
+								</h3>
+								<div class="serv-content-02">
+									<p>I offer a friendly and down-to-earth approach to therapy, providing a safe, confidential and non-judgemental space to talk.</p>
+								</div>
+								<div class="tabs tabs-horizontal-01">
+									<ul class="tabs__caption">
+										<li class="active">Advantages</li>
+										<li>Success</li>
+										<li>Results</li>
+									</ul>
+									<div class="tabs__content active">
+										<p>With training and experience in the main evidence-based psychotherapies, I work flexibly and collaboratively, tailoring therapy to the needs of each person I see.</p>
+										<ul class="list-01 list-01--style-01">
+											<li>A free initial telephone consultation</li>
+											<li>Instance access availability online</li>
+											<li>Confidential service for you</li>
+											<li>Support 24/7 in any way</li>
+										</ul>
+									</div>
+									<div class="tabs__content">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto corrupti repellendus, beatae tempora mollitia ex. Dolore ducimus magni libero, ut voluptate repellat iste corporis, dolores perspiciatis, sapiente nihil velit, suscipit! Lorem
+											ipsum dolor sit amet, consectetur adipisicing elit. Corporis et eos nihil officiis commodi asperiores tempora assumenda aspernatur enim delectus provident saepe laboriosam reprehenderit quod illum consequatur natus esse, fugit veniam odio illo
+											quam velit. Labore voluptatibus repellat animi aliquid rem temporibus vero, dolor, commodi natus quia, vel quos quae?</p>
+									</div>
+									<div class="tabs__content">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi vitae harum voluptatum, ipsa expedita quisquam numquam unde repudiandae quis animi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, quo dolores voluptatum possimus
+											delectus nemo mollitia illo nobis aliquid error omnis odit tempore deleniti amet earum neque, quaerat? Numquam iure magni voluptatum architecto commodi, officiis repellendus, animi aspernatur, incidunt voluptates inventore optio. Necessitatibus,
+											nam non aut fugiat ipsam aspernatur quasi?</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-6">
+							<p class="subtitle-01">FAQ</p>
+							<h3 class="title-02 mar-bt-21">Frequently Asked
+								<span>Questions</span>
+							</h3>
+							<div class="serv-content-03">
+								<p>I offer a friendly and down-to-earth approach to therapy, providing a safe, confidential and non-judgemental space to talk.</p>
+							</div>
+							<div class="accordion-01 acc-theme-03">
+								<h4 data-count="1" class="accordion-01__title expanded_yes">How do I arrange an appointment?</h4>
+								<div class="accordion-01__body">
+									<div class="accordion-01__text">
+										<p>
+											<span>You can arrange an appointment by telephoning 800 326 1024, our 24 hour line. You will be able to book an appointment over the phone. Calls are recorded for training and quality purposes.</span>
+										</p>
+									</div>
+								</div>
+								<h4 data-count="2" class="accordion-01__title expanded_no">How long will my treatment go on for?</h4>
+								<div class="accordion-01__body">
+									<div class="accordion-01__text">
+										<p>
+											<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris nec tellus...</span>
+											<a class="accordion-01__btn"
+											    href="#">view all</a>
+										</p>
+									</div>
+								</div>
+								<h4 data-count="3" class="accordion-01__title expanded_no">How can therapy help me?</h4>
+								<div class="accordion-01__body">
+									<div class="accordion-01__text">
+										<p>
+											<span>Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos nam nec ante, urna non...</span>
+											<a class="accordion-01__btn"
+											    href="#">view all</a>
+										</p>
+									</div>
+								</div>
+								<h4 data-count="4" class="accordion-01__title expanded_no">What about medication vs. psychotherapy?</h4>
+								<div class="accordion-01__body">
+									<div class="accordion-01__text">
+										<p>
+											<span>Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos nam nec ante, urna non...</span>
+											<a class="accordion-01__btn"
+											    href="#">view all</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-box-01 pad-top-85 pad-bt-100">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<h6 class="subtitle-01 text-center">Insights and News</h6>
+							<h3 class="title-03 title-03--mr-01 text-center">Latest
+								<span>News</span>
+							</h3>
+						</div>
+					</div>
+					<div class="row">
+						 {% for post in posts %}
+						<div class="text-xs-center col-sm-4 col-md-4 col-lg-4">
+							<div class="featured-post-01">
+								<figure class="featured-post-01__img">
+									<a href="blog_post_right_sidebar.html">
+									<img src="{{ post.img_off }}" alt="">
+									</a>
+								</figure>
+								<div class="featured-post-01__content">
+									<h3 class="featured-post-01__content-title">
+										<a href="blog_post_right_sidebar.html">{{ post.title }}</a>
+									</h3>
+									<ul class="featured-post-01__content-list">
+										<li>{{ post.posted_on }}</li>
+										<li>
+											<a href="#">{{ post.categorie }}</a>
+										</li>
+									</ul>
+									<div class="featured-post-01__content-text">
+										<p>Everyone feels low from time to time, so it’s not always easy to know when it is part...</p>
+									</div>
+									<a href="{{ url_for('/blog.post', post_id=post) }}" class="featured-post-01__content-btn">Learn more</a>
+								</div>
+							</div>
+						</div>
+						{% endfor %} 
+
+
+					</div>
+				</div>
+			</div>
+			<div class="content-box-03">
+				<div class="faq-content-02">
+					<div class="faq-content-02__wrapp">
+						<h6 class="subtitle-03">Contacts</h6>
+						<h3 class="title-04">Find Us on a
+							<span>Map</span>
+						</h3>
+						<div class="faq-content-02__text">
+							<p>We provide a wide range of specialist services for private clients and offer confidential services for professionals and businesses.</p>
+						</div>
+						<p class="faq-content-02__location">11 Walsingham Place, Truro,Cornwall TR1 2RP United Kingdom</p>
+						<a class="faq-content-02__email" href="#"><span>therapyretreats@gmail.com</span></a>
+						<p class="faq-content-02__phone">Call:
+							<span>+447810446496</span>
+						</p>
+					</div>
+				</div>
+				<div class="faq-content-03">
+					<div class="contacts_map">
+						<div id="map-canvas"></div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		 {% endblock content %}
